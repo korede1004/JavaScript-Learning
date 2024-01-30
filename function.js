@@ -156,8 +156,8 @@ let lowerLimit = 10;
 let upperLimit = 20;
 
 // Check if the number is between the lower and upper limits
-let result = isNumberBetween(numberToCheck, lowerLimit, upperLimit);
+let answers = isNumberBetween(numberToCheck, lowerLimit, upperLimit);
 
 // Display the result
-console.log(`${numberToCheck} is between ${lowerLimit} and ${upperLimit}: ${result}`);
+console.log(`${numberToCheck} is between ${lowerLimit} and ${upperLimit}: ${answers}`);
 
