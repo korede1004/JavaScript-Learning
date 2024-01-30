@@ -77,7 +77,6 @@ function add(num1, num2) {
 // Example
  //Write a function called isPositive that takes a number as a parameter and returns true if the number is positive and false if it's zero or negative.
 
-
 function isPositive(number) {
   return number > 0;
 }
@@ -85,3 +84,80 @@ function isPositive(number) {
 let num = 5;
 let answer = isPositive(num);
 console.log( answer); 
+
+
+// Example
+//Write a function called calculate that takes two numbers and an operator as parameters. The function should perform the specified arithmetic operation (addition, subtraction, multiplication, or division) and return the result.
+
+
+function calculate(num1, num2, operator) {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if (operator === "*") {
+    return num1 * num2;
+  } else if (operator === "/") {
+    if (num2 !== 0) {
+      return num1 / num2;
+    } else {
+      return "Cannot divide by zero!";
+    }
+  } else {
+    return "Invalid operator";
+  }
+}
+
+
+// Example
+// Write a function called isValidPassword that takes a password as a parameter. The function should return true if the password is at least 8 characters long and contains both uppercase and lowercase letters, and false otherwise.
+function isValidPassword(password) {
+  // Check if the password length is at least 8 characters
+  if (password.length < 8) {
+      return false;
+  }
+
+  // Check if the password contains at least one uppercase letter
+  let hasUppercase = /[A-Z]/.test(password);
+
+  // Check if the password contains at least one lowercase letter
+  let hasLowercase = /[a-z]/.test(password);
+
+  // Return true if both conditions are met, otherwise return false
+  return hasUppercase && hasLowercase;
+}
+
+// Example usage:
+let password1 = "StrongP@ss"; // Valid password
+let password2 = "weak";      // Invalid password
+
+console.log("Is password1 valid? " + isValidPassword(password1));
+console.log("Is password2 valid? " + isValidPassword(password2));
+
+
+// Example
+// Write a function called isNumberBetween that takes three parameters: a number, a lower limit, and an upper limit. The function should return true if the number is between the lower and upper limits (inclusive) and false otherwise
+
+function isNumberBetween(number, lowerLimit, upperLimit) {
+  // Check if the number is greater than or equal to the lower limit
+  // AND if the number is less than or equal to the upper limit
+  if (number >= lowerLimit && number <= upperLimit) {
+      // If both conditions are true, return true
+      return true;
+  } else {
+      // If at least one condition is false, return false
+      return false;
+  }
+}
+
+// Example usage:
+let numberToCheck = 15;
+let lowerLimit = 10;
+let upperLimit = 20;
+
+// Check if the number is between the lower and upper limits
+let result = isNumberBetween(numberToCheck, lowerLimit, upperLimit);
+
+// Display the result
+console.log(`${numberToCheck} is between ${lowerLimit} and ${upperLimit}: ${result}`);
+
