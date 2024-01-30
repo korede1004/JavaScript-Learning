@@ -72,4 +72,16 @@ function add(num1, num2) {
   console.log(celsiusToFahrenheit(temp));
   //   or
   console.log(celsiusToFahrenheit(20));
+
   
+// Example
+ //Write a function called isPositive that takes a number as a parameter and returns true if the number is positive and false if it's zero or negative.
+
+
+function isPositive(number) {
+  return number > 0;
+}
+
+let num = 5;
+let answer = isPositive(num);
+console.log( answer); 
